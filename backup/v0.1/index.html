@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			 <meta name="viewport" content="initial-scale=1; user-scalable=0"> 
+			<title>Todays Weather</title>
+			<link rel="stylesheet" href="css/normalize.css">
+			<link rel="stylesheet" href="css/main.css">
+			<script src="/analytics/analytics.js"></script>
+		</head>
+		<body>
+			<header>
+				<h1>Todays weather</h1>
+			</header>
+			<section>
+				<h2><span id="place"></span> today</h2>
+				<div id="openweathermap-widget-12"></div>
+				<div id="weather-result"></div><!--#weather-result-->
+			</section>
+			<footer>
+				<ul class="tools">
+					<li class="search-label">
+						<label for="search">Type in your city</label>
+					</li>
+					<li class="search-box">
+						<input type="text" id="search">
+					</li>
+					<li class="search-button">
+						<button>Search</button>
+					</li>
+					<li class="cf-switch">
+						<div id="temp-switch">
+						<label class="switch">
+						<input type="checkbox" id="tempunit">
+						<span class="slider">&#8451;  &#8457;</span>
+						</label>
+					</li>
+					<li class="home-button">
+						<button id="home">My location</button>
+					</li>
+			</footer>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+			<script src="script/weatherscript.js"></script>
+		</body>
+	</html>

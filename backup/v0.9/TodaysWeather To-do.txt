@@ -1,0 +1,5 @@
+Todays Weather app: To-Do:
+
+- Get Photographers name from Flickr API and show it in about box.
+- Hide API-keys in off-site javascript (if that works at all).
+- Style About-dialog for bigger screens.

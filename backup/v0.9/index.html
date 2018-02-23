@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			 <meta name="viewport" content="initial-scale=1, user-scalable=0"> 
+			<title>Todays Weather</title>
+			<link rel="stylesheet" href="css/normalize.css">
+			<link rel="stylesheet" href="css/main.css">
+			<script src="/analytics/analytics.js"></script>
+		</head>
+		<body>
+			<header>
+				<p class="about" id="about-box">About</p>
+				<h1>Todays weather</h1>
+			</header>
+			<section>
+				<h2><span id="place">Oslo</span> today</h2>
+				<div class="weather-result">
+					<p><span id="weather">Thunderstorm</span></p>
+					<p><span id="temp">20&#8451</span></p>
+				</div><!--#weather-result-->
+			</section>
+			<footer>
+				<ul class="tools">
+					<li class="search-li">
+						<input type="text" id="search" placeholder="Search for city...">
+					</li>
+					<li class="search-button-li">
+						<button type="button" id="search-button"><span class="button-span">Search</span></button>
+					</li>
+					<li class="temp-switch-li">
+						<div id="temp-switch">
+						<label class="switch">
+						<input type="checkbox" id="tempunit">
+						<span class="slider">&#8451;  &#8457;</span>
+						</label>
+					</li>
+					<li class="home-button-li">
+						<button type="button" id="home-button"><span class="button-span">My location</span></button>
+					</li>
+			</footer>
+			<div id="about-dialog">
+				<div id="close">x</div>
+				<h3>Todays Weather</h3>
+				<p>A weather app by Lars Vidar Nordli</p>
+				<p>Weather data from <a href="https://openweathermap.org" target="_blank">OpenWeatherMap.org</a></p>
+				<p>Background image retrived from <a href="https://www.flickr.com" target="_blank">Flickr.com</a></p>
+				<p>Current background image by <a id="photo" href="http://larsvidar.no" target="_blank"><span id="photographer">Lars Vidar Nordli</span></a></p>
+			</div><!--#about-box-->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+			<script src="script/weatherscript.js"></script>
+		</body>
+	</html>

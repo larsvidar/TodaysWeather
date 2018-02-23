@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Todays Weather</title>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/main.css">
+		<script src="/analytics/analytics.js"></script>
+	</head>
+		
+	<body class="text-white">
+		<div class="container-fluid mx-auto mt-1">
+			<header>
+				<p id="about" class="text-right mb-0">About</p>
+				<h1 class="display-5 mb-4">Todays weather</h1>
+				
+			</header>
+					
+			<section class="ml-2">
+				<h2 class="mb-3 h3"><span id="place">Oslo</span> today</h2>
+				<p><span id="weather" class="h2 ml-2">Thunderstorm</span></p>
+				<p><span id="temp" class="h1 ml-2">20&#8451</span><i id="icon" class="wi ml-5"></i></p>
+			</section>
+					
+			<footer class="tools row fixed-bottom mb-2 w-75 mx-auto">
+				<div class="input-group col-sm-6 col-xl-3">
+					<input type="text" id="search" class="form-control" placeholder="Search for city..." aria-label="Search for...">
+					<span class="input-group-btn">
+						<button id="search-button" class="btn btn-dark" type="button">Go!</button>
+					</span><!--.input-group-btn-->				
+				</div><!--.input-group-->
+				
+				<div id="tempunit" class="btn-group col" data-toggle="buttons">
+					<label class="btn btn-secondary active">
+						<input type="radio" name="temp" id="C" checked>&#8451;
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="temp" id="F">&#8457;
+					</label>
+				</div><!--#tempunit-->
+				
+				<button type="button" id="home-button" class="btn btn-dark col col-xl-2">My location</button>
+			</footer>
+		</div><!--.container-->
+			
+		<!-- Modal -->
+		<div id="about-dialog" class="">
+			<div id="close">&times;</div>
+			<h3>Todays Weather</h3>
+			<p>A weather app by Lars Vidar Nordli</p>
+			<p>Weather data from <a href="https://openweathermap.org" target="_blank">OpenWeatherMap.org</a></p>
+			<p>Background image retrived from <a href="https://www.flickr.com" target="_blank">Flickr.com</a></p>
+			<p>Current background image by <a id="photo" href="http://larsvidar.no" target="_blank"><span id="photographer">Lars Vidar Nordli</span></a></p>
+		</div><!--#about-box-->
+			
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+		<script src="script/weatherscript.js"></script>
+	</body>
+</html>

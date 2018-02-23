@@ -1,0 +1,218 @@
+body {
+	margin-top: -30px;
+	padding-top: 0;
+	width: 100%;
+	min-width: 320px;
+	min-height: 400px;
+}
+
+section {
+	margin-left: 15px;
+}
+
+h1 {
+	font-size: 3em;
+	line-height: 1.1em;
+	margin-left: 15px;
+}
+
+#weather-result {
+	color: white;
+	font-size: 2em;
+	line-height: .4em;
+}
+
+
+footer {
+	left: 0;
+	width: 100%;
+}
+
+.tools {
+	flex-direction: row;
+	justify-content: space-evenly;
+	font-size: 1em;
+	margin-left: -35px;
+}
+
+.tools li {
+	margin: 5px 0;
+}
+
+
+input[type=text] {
+	width: 80%;
+	margin: 5px 0 0 10%;
+}
+
+
+
+
+button {
+	line-height: 2.5em;
+	color: black;
+	padding: 0 8px 3px;
+	background: #ddd;
+
+	outline: none;
+	cursor: pointer;
+}
+
+
+
+.search-button {
+	order: 1;
+}
+
+#temp-switch {
+	font-size: 2em;
+}
+
+
+
+
+
+
+@viewport{
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+
+@media (min-width: 470px) {
+		body {
+			font-size: 1.1em;
+		}
+		
+		h1 {
+			margin-right: 15px;
+			margin-top: 60px;
+			margin-bottom: 60px;
+		}
+		
+		#weather-result {
+			font-size: 3em;
+		}
+		
+		footer {
+			bottom: 25px;
+		}
+		
+		.search-label {
+			font-size: 1.5em;
+		}
+		
+		.search-box {
+			flex-basis: 100%;
+		}
+}
+
+
+
+@media (min-width: 640px) {
+	body {
+		font-size: 1.6em;
+	}
+	
+	footer {
+			height: 200px;
+		}
+		
+	.search-label {
+		display: block;
+		position: absolute;
+		top: -30px;
+		left: 60px;
+	}
+	
+	.search-box {
+		flex-basis: 80%;
+		padding-bottom: 20px;
+		}
+		
+	.search-button {
+		order: 0;
+		flex-basis: 20%;
+		padding-top: 6px;
+	}
+	
+	.switch {
+		width: 130px;
+		height: 60px;
+	}
+	
+	.slider:before {
+	  height: 57px;
+	  width: 72px;
+	}
+	
+	input:checked + .slider:before {
+	  -webkit-transform: translateX(62px);
+	  -ms-transform: translateX(62px);
+	  transform: translateX(62px);
+	}
+	
+}
+
+@media (min-width: 900px) {
+	body {
+		font-size: 2em;
+		margin: 50px;
+	}
+	
+	h1 {
+		margin-left: -20px;
+		margin-bottom: 150px;
+	}
+	
+	footer {
+		padding-left: 0;
+		font-size: .8em;
+	}
+	
+	.search-box {
+		flex-basis: 50%;
+		margin-right: -50px;
+	}
+	
+	.search-label {
+		left: 5%;
+	}
+	
+	.tools {
+		margin-left: 0px;
+	}
+	
+	.tools li {
+	}
+	
+	.search-button {
+		flex-basis: 10%;
+	}
+	
+	.cf-switch {
+		flex-basis: 10%;
+	}
+	
+	.home-button {
+		flex-basis: 20%;
+	}
+	
+	#search {
+		display: block;
+		position: absolute;
+		left: -45px;
+		width: 420px;
+	}
+	
+	.switch {
+		height: 75px;
+	}
+	
+	.slider:before {
+	  height: 72px;
+	}
+}
+
+
+
+

@@ -1,0 +1,520 @@
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 23px;
+	font-size: 7vw;
+	text-shadow: 0 0 1px #000,
+				 0 0 2px #000,
+				 0 0 3px #000,
+				 3px 3px 3px #000;
+	background: #005 url("../raindrops_small.jpg") no-repeat center;
+	background-size: cover;
+	overflow: hidden;
+	height: 100vh;
+}
+
+h1 {
+	font-family: "Arial Black", Gadget, sans-serif;
+	line-height: 110%;
+	margin: 0;
+}
+
+h2 {
+	margin: 10% 0 15% 5%;
+}
+
+.about {
+	text-align: right;
+	line-height: 20%;
+	margin-bottom: 0px;
+	cursor: pointer;
+}
+
+.weather-result {
+	font-family: "Arial Black", Gadget, sans-serif;
+	line-height: 40%;
+	margin-left: 10%;
+	text-shadow: 0 0 1px #000,
+				 0 0 1px #000,
+				 0 0 2px #000,
+				 0 0 3px #000,
+				 0 0 4px #000,
+				 0 0 5px #000,
+				 6px 6px 6px #000;
+}
+
+.weather-result #temp {
+	font-size: 150%;
+}
+
+footer {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	height: 130px;
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+}
+
+.tools {
+	position: relative;
+	list-style-type: none;
+	padding: 0;
+}
+
+.tools li {
+	display: inline-block;
+	margin: 1%;
+}
+
+.search-li {
+	width: 65%;
+}
+
+#search-button,
+#home-button {
+	background-color: #ccc;
+	font-size: 0;
+}
+.button-span {
+	font-size: 20px;
+	padding: 0 5px;
+}
+
+#search {
+	border-radius: 20px;
+	padding: 0 0 0 10px;
+	font-size: inherit;
+	width: 100%;
+}
+
+#search:focus {
+	outline: none;
+}
+
+button {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: inherit;
+	border: solid 1px #333;
+	border-radius: 20px;
+	-webkit-box-shadow: 0 0 1px #000,
+				3px 3px 3px #000;
+	box-shadow: 0 0 1px #000,
+				3px 3px 3px #000;
+}
+
+button:active {
+	-ms-transform: translate(2px, 2px); /* IE 9 */
+    -webkit-transform: translate(2px, 2px); /* Safari */
+    transform: translate(2px, 2px);
+	-webkit-box-shadow: 0 0 1px #000,
+				1px 1px 1px #000;
+	box-shadow: 0 0 1px #000,
+				1px 1px 1px #000;
+	outline: none;
+}
+
+button:focus {
+	outline: none;
+}
+
+.temp-switch-li {
+	position: absolute;
+	top: 40px;
+	left: 10%;
+}
+
+.home-button-li {
+	position: absolute;
+	top: 40px;
+	right: 10%;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 65px;
+  height: 30px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	display:none;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #aaa;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+  border: solid 1px #000;
+  border-radius: 34px;
+  padding: 2px 0 0 0;
+  z-index: -10;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 33px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border: solid 1px black;
+  background-color: white;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+  border-radius: 25px;;
+  z-index: -1;
+}
+
+input:checked + .slider {
+  background-color: #aaa
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #aaa;
+          box-shadow: 0 0 1px #aaa;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(30px);
+}
+
+#about-dialog {
+	display: none;
+	position: absolute;
+	padding: 0 20px;
+	top: calc((100vh - 390px)/2);
+	left: 0;
+	right: 0;
+	margin: auto;
+	font-size: 20px;
+	width: 250px;
+	height: 300px;
+	color: white;
+	background: #666;
+	border: solid 2px #000;
+	border-radius: 30px;
+	text-shadow: none;	
+	box-shadow: 4 4 4 #f00;
+}
+
+#about-dialog p {
+	font-size: 15px;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	font-style: italic;
+}
+
+a:visited {
+	color: white;
+}
+
+#close {
+	display: block;
+	position: absolute;
+	top: 5px;
+	right: 12px;
+	height: 20px;
+	cursor: pointer;
+	font-size: 30px;
+}
+
+@viewport{
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+
+@media (min-width: 410px) and (orientation: portrait) {
+	body {
+		font-size: 220%;
+	}
+	
+	.about {
+		font-size: 80%;
+	}
+	
+	footer{
+		height: 180px;
+		font-size: 30px;
+	}
+	
+	.button-span {
+		font-size: 30px;
+	}
+	
+	.search-li {
+		width: 60%;
+	}
+	
+	.tools li {
+		margin-bottom: 10px;
+	}
+	
+	.temp-switch-li {
+		top: 60px;
+		left: 10%;
+	}
+
+	.home-button-li {
+		top: 60px;
+		right: 10%;
+	}
+	
+	.switch {
+	  width: 85px;
+	  height: 40px;
+	}
+	
+	.slider:before {
+	  width: 46px;
+	  height: 37px;
+	}
+	
+	input:checked + .slider:before {
+		-webkit-transform: translateX(35px);
+		-ms-transform: translateX(35px);
+		transform: translateX(35px);
+	}
+}
+
+@media (min-width: 640px) and (orientation: portrait) {
+	body {
+		font-size: 350%;
+		margin: 15px;
+	}
+	
+	.about {
+		font-size: 50%;
+	}
+	
+	h2 {
+		font-size: 100%;
+	}
+	
+	.weather-result #temp {
+		font-size: 200%;
+	}
+	
+	footer {
+		height: 130px;
+	}
+	
+	.tools {
+		text-align: left
+	}
+	
+	.search-li {
+		width: 50%;
+	}
+	
+	.temp-switch-li {
+		width: 100px;
+		top: 0px;
+		left: auto;
+		right: 15px;
+	}
+
+	.home-button-li {
+		top: -60px;
+		right: 30px;
+	}
+	
+	
+}
+
+@media (min-width: 900px) and (orientation: portrait) {
+	body {
+		font-size: 600%;
+		margin: 40px;
+	}
+	
+	h1 {
+		font-size: 150%;
+	}
+	
+	.about {
+		font-size: 25%;
+	}
+	
+	footer {
+		height: 200px;
+	}
+	
+	.button-span {
+		font-size: 40px;
+	}
+	
+	.tools {
+		font-size: 40px;
+	}
+	
+	.tools li {
+		margin-bottom: 10px;
+	}
+	
+	.search-li {
+		width: 40%;
+	}
+	
+	.search-button-li {
+		display: block;
+		
+	}
+	
+	.temp-switch-li {
+		right: 0;
+	}
+
+	.home-button-li {
+		top: 0;
+		right: 120px;
+	}
+	
+	.slider {
+		padding: 4px;
+	}
+	
+	.switch {
+	  width: 100px;
+	  height: 50px;
+	}
+	
+	.slider:before {
+	  width: 50px;
+	  height: 47px;
+	}
+	
+	input:checked + .slider:before {
+		-webkit-transform: translateX(46px);
+		-ms-transform: translateX(46px);
+		transform: translateX(46px);
+	}
+
+}
+
+@media (orientation: landscape) {
+	body {
+		font-size: 130%;
+	}
+	
+	h1 {
+		line-height: 50%;
+	}
+	
+	h2 {
+	margin: 8% 0 7% 7%;
+
+	footer {
+		height: 120px;
+	}
+}
+
+@media (min-width: 800px) and (orientation: landscape) {
+	body {
+		font-size: 300%;
+		margin: 5%;
+	}
+	
+	h1 {
+		font-size: 350%;
+	}
+	
+	.about {
+		font-size: 80%;
+	}
+	
+	h2 {
+		font-size: 200%;
+	}
+
+	.weather-result	{
+		font-size: 250%;
+	}
+		
+	footer {
+		height: 250px;
+	}
+	
+	.button-span {
+		font-size: 40px;
+	}
+	
+	.tools {
+		text-align: left;
+		font-size: 40px;
+	}
+	
+	.tools li {
+		margin-bottom: 10px;
+	}
+	
+	.search-li {
+		width: 40%;
+	}
+	
+	.search-button-li {
+		display: block;
+		
+	}
+	
+	.temp-switch-li {
+		top: 0;
+		left: auto;
+		right: 0;
+	}
+
+	.home-button-li {
+		top: 0;
+		right: 120px;
+	}
+	
+	.slider {
+		padding: 4px;
+	}
+	
+	.switch {
+	  width: 100px;
+	  height: 50px;
+	}
+	
+	.slider:before {
+	  width: 50px;
+	  height: 47px;
+	}
+	
+	input:checked + .slider:before {
+		-webkit-transform: translateX(46px);
+		-ms-transform: translateX(46px);
+		transform: translateX(46px);
+	}
+}
+
+@media (min-width: 2000px) {
+	footer {
+		height: 340px;
+	}	
+}
